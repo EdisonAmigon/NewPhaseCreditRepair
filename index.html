@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Phase Credit Repair</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rose-garden: #f72585;
+      --neon-wonders: #4361ee;
+      --power-grid-electric: #aa3af5;
+      --sky-blue: #00dbff;
+      --jet-asphalt: #333535;
+      --bg-grey: #f1f4f6;
+    }
+    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--jet-asphalt);
+      margin: 0;
+      background: white;
+    }
+
+    /* ── Scroll-reveal animations ── */
+    .reveal {
+      opacity: 0;
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.from-left  { transform: translateX(-64px); }
+    .reveal.from-right { transform: translateX(64px); }
+    .reveal.from-bottom{ transform: translateY(48px); }
+    .reveal.visible    { opacity: 1; transform: none; }
+
+    /* ── Gradient buttons ── */
+    .btn-pink {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(90deg, #f72585, #aa3af5);
+      color: #fff; font-weight: 600; font-size: 0.95rem;
+      border: none; border-radius: 9999px; padding: 13px 28px;
+      cursor: pointer; white-space: nowrap;
+    }
+    .btn-pink-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white;
+      color: #f72585; font-weight: 700; font-size: 0.95rem;
+      border: none; border-radius: 9999px; padding: 13px 28px;
+      cursor: pointer; white-space: nowrap;
+    }
+    .btn-white-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent;
+      color: white; font-weight: 600; font-size: 0.9rem;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 9999px; padding: 10px 22px;
+      cursor: pointer;
+    }
+
+    /* ── Hero gradient ── */
+    .hero-bg {
+      background: linear-gradient(135deg, #1042c8 0%, #3a5de8 35%, #00b8e0 80%, #00dbff 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-blob {
+      position: absolute; border-radius: 50%;
+      pointer-events: none; opacity: 0.25;
+    }
+
+    /* ── Score bubbles ── */
+    .score-ring {
+      position: absolute;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.22);
+      backdrop-filter: blur(10px);
+      border: 3px solid rgba(255,255,255,0.7);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.1rem; color: white;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+      line-height: 1;
+    }
+    .score-ring small {
+      font-size: 0.55rem; font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    /* ── Feature cards ── */
+    .feat-card {
+      background: white;
+      border-radius: 16px;
+      padding: 36px 28px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+      text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 14px;
+    }
+    .feat-icon {
+      width: 64px; height: 64px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    /* ── Pink section ── */
+    .pink-section {
+      background: linear-gradient(135deg, #f72585 0%, #d41870 100%);
+      position: relative; overflow: hidden;
+    }
+
+    /* ── Dashboard card ── */
+    .dash-card {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #eef0f3;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      padding: 20px;
+    }
+
+    /* ── Blob shapes for pink section ── */
+    .blob-cyan {
+      background: #00dbff;
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+    }
+    .blob-blue {
+      background: #4361ee;
+      border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+    }
+
+    /* ── Stat card ── */
+    .stat-card {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #eef0f3;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      padding: 28px 24px;
+    }
+
+    /* ── Bottom CTA ── */
+    .cta-card {
+      background: linear-gradient(135deg, #f72585 0%, #c0186a 100%);
+      border-radius: 28px;
+      position: relative; overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     ANNOUNCEMENT BAR
+══════════════════════════════════════════ -->
+<div style="background:#f72585;" class="text-white text-center py-2 text-sm font-semibold tracking-wide">
+  See your potential score gains for just $1
+</div>
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav class="bg-white py-4 px-8 flex items-center justify-between" style="box-shadow:0 1px 0 #eee;">
+  <!-- Logo -->
+  <div class="flex items-center gap-1">
+    <span class="font-extrabold text-xl" style="color:#333535;">New Phase</span>
+    <span class="font-extrabold text-xl" style="color:#4361ee;">&nbsp;Credit Repair</span>
+    <!-- icon -->
+    <svg class="ml-1 w-6 h-6" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" fill="url(#logoGrad)"/>
+      <path d="M8 12l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <defs>
+        <linearGradient id="logoGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#4361ee"/>
+          <stop offset="1" stop-color="#00dbff"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <!-- Actions -->
+  <div class="flex items-center gap-5">
+    <button class="btn-pink" style="padding:9px 22px;font-size:0.85rem;">
+      Sign Up
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="white" stroke-width="1.5"/><path d="M8 5v6M5 8h6" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <button class="flex items-center gap-2 text-sm font-semibold" style="color:#333535;">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="7" r="3.5" stroke="#333535" stroke-width="1.5"/><path d="M2.5 16c0-3.314 2.91-6 6.5-6s6.5 2.686 6.5 6" stroke="#333535" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Sign In
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero-bg" style="min-height:520px;padding:64px 48px;">
+  <!-- decorative blobs -->
+  <div class="hero-blob" style="width:500px;height:500px;background:#00dbff;top:-160px;right:-80px;"></div>
+  <div class="hero-blob" style="width:300px;height:300px;background:#aa3af5;bottom:-100px;left:-60px;"></div>
+  <div class="hero-blob" style="width:200px;height:200px;background:#4361ee;top:60px;left:30%;opacity:.15;"></div>
+
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-8 relative" style="z-index:1;">
+
+    <!-- Left: illustration + score bubbles -->
+    <div class="flex-1 relative flex items-center justify-center reveal from-left" style="min-height:460px;">
+      <!-- Score rings -->
+      <div class="score-ring" style="top:6%;left:8%;border-color:#f72585;">
+        <small>Score</small>
+        <span>642</span>
+      </div>
+      <div class="score-ring" style="top:18%;right:6%;border-color:#00dbff;">
+        <small>Score</small>
+        <span>653</span>
+      </div>
+      <div class="score-ring" style="top:52%;left:10%;border-color:#aa3af5;">
+        <small>Score</small>
+        <span>675</span>
+      </div>
+
+      <!-- Main image -->
+      <img src="https://placehold.co/320x440/3a5de8/ffffff?text=New+Phase+App" alt="Credit app preview"
+           class="rounded-2xl relative" style="z-index:2;max-width:280px;box-shadow:0 20px 60px rgba(0,0,0,0.3);" />
+
+      <!-- Floating UI cards -->
+      <div class="absolute bg-white rounded-xl p-3 shadow-xl" style="bottom:18%;right:4%;width:150px;z-index:3;">
+        <div class="text-xs font-bold mb-1" style="color:#4361ee;">Equifax Letter</div>
+        <div class="text-xs text-gray-400">Status: Sent ✓</div>
+        <div class="text-xs text-gray-300 mt-1">Dispute #4821</div>
+      </div>
+      <div class="absolute bg-white rounded-xl p-3 shadow-xl" style="top:42%;left:-4%;width:140px;z-index:3;">
+        <div class="text-xs font-bold" style="color:#f72585;">CREDIT CARD</div>
+        <div class="text-xs text-gray-400 mt-1">•••• •••• •••• 4521</div>
+        <div class="text-xs font-semibold mt-1" style="color:#333535;">Score +12 ↑</div>
+      </div>
+    </div>
+
+    <!-- Right: headline -->
+    <div class="flex-1 reveal from-right" style="padding-left:32px;">
+      <h1 class="font-extrabold text-white leading-tight mb-5"
+          style="font-size:clamp(2rem,3.5vw,3rem);">
+        Unlock a Higher<br>Credit Score
+      </h1>
+      <p class="mb-8 text-base" style="color:rgba(255,255,255,0.85);max-width:400px;">
+        Take control of your credit with easy disputing and AI score boosting tools — all in the palm of your hand.
+      </p>
+      <button class="btn-pink">
+        Boost My Score
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="white" stroke-width="1.5"/><path d="M6.5 9h5M9 6.5L11.5 9 9 11.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FEATURES
+══════════════════════════════════════════ -->
+<section class="bg-white py-20 px-8">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="font-bold mb-14 reveal from-bottom"
+        style="font-size:clamp(1.4rem,2.5vw,2rem);color:#333535;line-height:1.4;">
+      Take the fast track to credit confidence with the<br>main tools you need for score improvements.
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <!-- Card 1 -->
+      <div class="feat-card reveal from-left">
+        <div class="feat-icon" style="background:#fff0f7;">
+          <svg width="34" height="34" viewBox="0 0 28 28" fill="none">
+            <rect x="3" y="7" width="22" height="15" rx="3" stroke="#f72585" stroke-width="2"/>
+            <path d="M3 11h22" stroke="#f72585" stroke-width="2"/>
+            <rect x="6" y="15" width="6" height="2" rx="1" fill="#f72585"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-bold text-base" style="color:#f72585;">3-Bureau</div>
+          <div class="font-semibold text-base" style="color:#333535;">Credit Scores &amp; Reports</div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="feat-card reveal from-bottom" style="transition-delay:0.1s;">
+        <div class="feat-icon" style="background:#f0f3ff;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14 4C8.477 4 4 8.477 4 14s4.477 10 10 10 10-4.477 10-10" stroke="#4361ee" stroke-width="2" stroke-linecap="round"/>
+            <path d="M19 4l5 5-5 5" stroke="#4361ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 9v5l3 2" stroke="#4361ee" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-bold text-base" style="color:#4361ee;">AI-Driven Interactive</div>
+          <div class="font-semibold text-base" style="color:#333535;">Credit Analysis</div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="feat-card reveal from-right" style="transition-delay:0.2s;">
+        <div class="feat-icon" style="background:#f7f0ff;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14 4l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6l2-6z" stroke="#aa3af5" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-base" style="color:#333535;">
+            <span style="color:#f72585;">Unlimited</span> Dispute Generation
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-pink reveal from-bottom">
+      Start Your $1 Trial
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="white" stroke-width="1.5"/><path d="M6.5 9h5M9 6.5L11.5 9 9 11.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     REAL RESULTS
+══════════════════════════════════════════ -->
+<section style="background:#f1f4f6;" class="py-20 px-8">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
+
+    <!-- Left: text (now from-left) -->
+    <div class="flex-1 reveal from-left">
+      <!-- Block 1 -->
+      <div class="flex items-start gap-4 mb-10">
+        <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style="background:#e8edff;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1v12z" stroke="#4361ee" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M4 22v-7" stroke="#4361ee" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h2 class="font-bold mb-2" style="font-size:1.5rem;color:#333535;">Real Results. Real Fast.</h2>
+          <p style="color:#8a8fa8;font-size:0.95rem;">Take control of your credit with easy disputing and AI score boosting tools — all in the palm of your hand.</p>
+        </div>
+      </div>
+      <!-- Block 2 -->
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style="background:#e8edff;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" stroke="#4361ee" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2" style="font-size:1.25rem;color:#333535;">A High Score is Your Right</h3>
+          <p style="color:#8a8fa8;font-size:0.95rem;">
+            Easily <span style="color:#f72585;font-weight:600;">dispute flaws</span> to ALL 3 bureaus.
+            Don't be scared — disputing is <span style="color:#f72585;font-weight:600;">your right</span> and won't hurt your score!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: phone mockups (now from-right) -->
+    <div class="flex-1 flex justify-center reveal from-right">
+      <div class="relative" style="width:300px;height:360px;">
+        <!-- Back phone -->
+        <div class="absolute rounded-2xl overflow-hidden shadow-2xl"
+             style="width:200px;height:340px;top:20px;right:0;transform:rotate(5deg);background:#fff;border:2px solid #eee;z-index:1;">
+          <div style="background:#4361ee;padding:12px 16px;">
+            <div class="text-white font-bold text-xs">Score Center</div>
+          </div>
+          <div style="padding:16px;" class="flex flex-col items-center">
+            <!-- Donut -->
+            <svg width="90" height="90" viewBox="0 0 90 90" class="mt-2">
+              <circle cx="45" cy="45" r="35" fill="none" stroke="#eee" stroke-width="8"/>
+              <circle cx="45" cy="45" r="35" fill="none" stroke="#4361ee" stroke-width="8"
+                stroke-dasharray="165 55" stroke-linecap="round" transform="rotate(-90 45 45)"/>
+              <text x="45" y="43" text-anchor="middle" font-size="18" font-weight="700" fill="#4361ee">653</text>
+              <text x="45" y="57" text-anchor="middle" font-size="9" fill="#aaa">Fair</text>
+            </svg>
+            <div style="font-size:0.65rem;color:#aaa;margin-top:8px;">Experian</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#333535;">653</div>
+          </div>
+        </div>
+        <!-- Front phone -->
+        <div class="absolute rounded-2xl overflow-hidden shadow-2xl"
+             style="width:190px;height:320px;bottom:0;left:0;transform:rotate(-4deg);background:#fff;border:2px solid #eee;z-index:2;">
+          <div style="background:#f1f4f6;padding:10px 14px;border-bottom:1px solid #eee;">
+            <div style="font-size:0.7rem;font-weight:700;color:#333535;">Score Tracker</div>
+          </div>
+          <div style="padding:14px;">
+            <div style="font-size:0.65rem;color:#aaa;">Target Score</div>
+            <div style="font-size:1.5rem;font-weight:800;color:#333535;">740</div>
+            <!-- Mini chart -->
+            <svg width="150" height="60" viewBox="0 0 150 60" style="margin-top:8px;">
+              <polyline points="0,50 30,40 60,35 90,20 120,15 150,8"
+                fill="none" stroke="#4361ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="0,50 30,40 60,35 90,20 120,15 150,8 150,60 0,60"
+                fill="url(#chartFill)" stroke="none"/>
+              <defs>
+                <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4361ee" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#4361ee" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PINK CTA BANNER
+══════════════════════════════════════════ -->
+<section class="pink-section py-20 px-8">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 relative" style="z-index:1;">
+
+    <!-- Left: text (from-left) -->
+    <div class="flex-1 reveal from-left">
+      <h2 class="font-bold text-white mb-8 leading-tight" style="font-size:clamp(1.5rem,2.5vw,2.2rem);">
+        Be Part of the Credit Success Story: Millions Have Improved Their Scores With Us.
+      </h2>
+      <button class="btn-pink-outline">
+        Join the Club
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#f72585" stroke-width="1.5"/><path d="M6.5 9h5M9 6.5L11.5 9 9 11.5" stroke="#f72585" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <!-- Right: 3D blobs (from-right) -->
+    <div class="flex-1 flex justify-center items-center reveal from-right" style="min-height:200px;">
+      <div class="relative" style="width:280px;height:200px;">
+        <div class="blob-cyan absolute" style="width:130px;height:130px;top:0;right:20px;opacity:0.95;"></div>
+        <div class="blob-blue absolute" style="width:90px;height:90px;top:50px;right:130px;opacity:0.9;"></div>
+        <div class="blob-cyan absolute" style="width:60px;height:60px;bottom:0;right:50px;opacity:0.85;"></div>
+        <div style="position:absolute;width:40px;height:40px;border-radius:50%;background:#00dbff;top:10px;left:30px;opacity:0.7;"></div>
+        <div style="position:absolute;width:25px;height:25px;border-radius:50%;background:#4361ee;bottom:20px;left:60px;opacity:0.8;"></div>
+      </div>
+    </div>
+
+  </div>
+  <!-- bg decoration -->
+  <div class="absolute" style="width:300px;height:300px;background:rgba(255,255,255,0.05);border-radius:50%;top:-100px;left:-80px;pointer-events:none;"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     DASHBOARD FEATURES
+══════════════════════════════════════════ -->
+<section class="bg-white py-20 px-8">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Row 1: Score Center + Dispute Hub -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+
+      <!-- Score Center (from-left) -->
+      <div class="reveal from-left">
+        <h3 class="font-bold text-lg mb-1" style="color:#333535;">Score Center</h3>
+        <p style="color:#8a8fa8;font-size:0.9rem;" class="mb-4">View your latest credit scores from the 3 major bureaus and set your credit score goals.</p>
+        <div class="dash-card">
+          <div class="font-bold text-sm mb-3" style="color:#333535;">Score Center</div>
+          <!-- Bureau tabs -->
+          <div class="flex gap-4 text-xs mb-4">
+            <span style="color:#aaa;">Transunion</span>
+            <span style="color:#aaa;">Experian</span>
+            <span style="color:#aaa;">Eq</span>
+          </div>
+          <!-- Score + donut -->
+          <div class="flex items-center gap-6 mb-4">
+            <svg width="80" height="80" viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="7"/>
+              <circle cx="40" cy="40" r="30" fill="none" stroke="#4361ee" stroke-width="7"
+                stroke-dasharray="137 51" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+              <text x="40" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#4361ee">653</text>
+              <text x="40" y="50" text-anchor="middle" font-size="8" fill="#aaa">Fair</text>
+            </svg>
+            <div>
+              <div style="font-size:0.75rem;color:#aaa;">Experian</div>
+              <div style="font-size:2rem;font-weight:800;color:#333535;">653</div>
+              <div style="font-size:0.75rem;color:#27ae60;">↑ +12 pts</div>
+            </div>
+          </div>
+          <!-- Score tracker -->
+          <div class="font-semibold text-xs mb-2" style="color:#333535;">Score Tracker</div>
+          <svg width="100%" height="50" viewBox="0 0 240 50" preserveAspectRatio="none">
+            <polyline points="0,45 48,38 96,30 144,18 192,12 240,6"
+              fill="none" stroke="#4361ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,45 48,38 96,30 144,18 192,12 240,6 240,50 0,50"
+              fill="url(#sf)" stroke="none"/>
+            <defs>
+              <linearGradient id="sf" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#4361ee" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#4361ee" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dispute Hub + Credit Report Review (from-right) -->
+      <div class="reveal from-right">
+        <h3 class="font-bold text-lg mb-1" style="color:#333535;">Dispute Hub</h3>
+        <p style="color:#8a8fa8;font-size:0.9rem;" class="mb-4">We make it easy to dispute those negative items on your credit report. Our Dispute Hub generates custom dispute letters for each credit bureau and tracks your progress.</p>
+        <div class="dash-card mb-6">
+          <!-- Tabs -->
+          <div class="flex gap-6 text-sm mb-4">
+            <span style="color:#aaa;">Drafts
+              <span class="ml-1 px-2 py-0.5 rounded-full text-xs" style="background:#f1f4f6;">0</span>
+            </span>
+            <span style="color:#aaa;">Created
+              <span class="ml-1 px-2 py-0.5 rounded-full text-xs" style="background:#f1f4f6;">0</span>
+            </span>
+            <span style="color:#4361ee;font-weight:600;">Sent
+              <span class="ml-1 px-2 py-0.5 rounded-full text-xs" style="background:#e8edff;">0</span>
+            </span>
+          </div>
+          <div style="border-top:1px solid #f1f4f6;padding-top:14px;">
+            <div class="font-semibold text-sm mb-1" style="color:#333535;">Sent Letters</div>
+            <p style="color:#aaa;font-size:0.8rem;">Update your dispute results to complete these letters. It takes between 30–45 days!</p>
+          </div>
+        </div>
+
+        <!-- Credit Report Review -->
+        <h3 class="font-bold text-lg mb-1" style="color:#333535;">Credit Report Review</h3>
+        <p style="color:#8a8fa8;font-size:0.9rem;" class="mb-3">Review flagged items that can potentially be negatively affecting your credit score.</p>
+        <div class="dash-card">
+          <div class="flex justify-between items-center py-3" style="border-bottom:1px solid #f1f4f6;">
+            <span class="text-sm font-medium" style="color:#333535;">Accounts</span>
+            <span class="flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full" style="background:#fff0f0;color:#e53e3e;">
+              ⚠ 4 Need Review
+            </span>
+          </div>
+          <div class="flex justify-between items-center py-3">
+            <span class="text-sm font-medium" style="color:#333535;">Home Loans (1)</span>
+            <span class="flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full" style="background:#fff0f0;color:#e53e3e;">
+              ⚠ 1 Need Review
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Track Your Progress (from-left) -->
+    <div class="mb-12 reveal from-left" style="max-width:480px;">
+      <h3 class="font-bold text-lg mb-1" style="color:#333535;">Track Your Progress</h3>
+      <p style="color:#8a8fa8;font-size:0.9rem;" class="mb-4">Easily keep track of your dispute letters and the responses you receive from the credit bureaus.</p>
+      <div class="dash-card flex items-center gap-4" style="max-width:280px;">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#e8edff;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" stroke="#4361ee" stroke-width="2"/>
+            <path d="M4 4l8 8 8-8" stroke="#4361ee" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-sm" style="color:#4361ee;">Equifax Letter</div>
+          <div class="text-xs" style="color:#aaa;">Dispute in progress</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <!-- Stat 1 (from-left) -->
+      <div class="stat-card reveal from-left">
+        <div class="flex items-center gap-3 mb-3">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <circle cx="13" cy="12" r="5" stroke="#4361ee" stroke-width="2"/>
+            <circle cx="23" cy="12" r="5" stroke="#4361ee" stroke-width="2"/>
+            <path d="M4 28c0-5 4-8 9-8M32 28c0-5-4-8-9-8M18 20c4 0 8 3 8 8H10c0-5 4-8 8-8z" stroke="#4361ee" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="font-extrabold text-2xl mb-2" style="color:#333535;">1 in 3 People</div>
+        <p style="color:#8a8fa8;font-size:0.85rem;">have an inaccuracy on their credit report.</p>
+        <p style="color:#ccc;font-size:0.7rem;margin-top:10px;">Source: ConsumerReport</p>
+      </div>
+      <!-- Stat 2 (from-bottom) -->
+      <div class="stat-card reveal from-bottom" style="transition-delay:0.1s;">
+        <div class="font-extrabold text-2xl mb-2" style="color:#333535;">20 points in 30 days</div>
+        <p style="color:#8a8fa8;font-size:0.85rem;">You can increase your credit score by at least 20 points in 30 days.</p>
+        <p style="color:#ccc;font-size:0.7rem;margin-top:10px;">Source: Consumer Mortgage Credit Potential Index</p>
+      </div>
+      <!-- Stat 3 (from-right) -->
+      <div class="stat-card reveal from-right" style="transition-delay:0.2s;">
+        <div class="font-extrabold text-3xl mb-1" style="color:#4361ee;">+50</div>
+        <div class="font-extrabold text-xl mb-2" style="color:#333535;">50 Points or More</div>
+        <p style="color:#8a8fa8;font-size:0.85rem;">Increase your credit score by 50 points or more for those who stay on the product longer.</p>
+        <p style="color:#ccc;font-size:0.7rem;margin-top:10px;">Source: IDIQ Study of IdentityIQ and MyScoreIQ brands</p>
+      </div>
+    </div>
+
+    <!-- CTA button -->
+    <div class="text-center reveal from-bottom">
+      <button class="btn-pink">
+        Start Your $1 Trial
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="white" stroke-width="1.5"/><path d="M6.5 9h5M9 6.5L11.5 9 9 11.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BOTTOM CTA CARD
+══════════════════════════════════════════ -->
+<section class="py-12 px-8">
+  <div class="max-w-5xl mx-auto">
+    <div class="cta-card flex flex-col md:flex-row items-center gap-8 p-12">
+      <!-- Left text (from-left) -->
+      <div class="flex-1 reveal from-left">
+        <h2 class="font-bold text-white mb-6 leading-tight" style="font-size:clamp(1.5rem,2.5vw,2.2rem);">
+          Take Control of Your Credit for Only $39.99/mo
+        </h2>
+        <button class="btn-pink-outline">
+          Start Your $1 Trial
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#f72585" stroke-width="1.5"/><path d="M6.5 9h5M9 6.5L11.5 9 9 11.5" stroke="#f72585" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <!-- Right: app screenshots (from-right) -->
+      <div class="flex-1 flex justify-end relative reveal from-right">
+        <div class="relative" style="height:200px;width:320px;">
+          <!-- blob decorations inside card -->
+          <div style="position:absolute;width:100px;height:100px;background:rgba(0,219,255,0.35);border-radius:60% 40% 70% 30%/50% 60% 40% 50%;top:-20px;left:30px;"></div>
+          <div style="position:absolute;width:60px;height:60px;background:rgba(67,97,238,0.4);border-radius:50%;bottom:10px;left:10px;"></div>
+          <img src="https://placehold.co/260x190/ffffff/4361ee?text=App+Screenshots" alt="App screenshots"
+               class="rounded-2xl relative" style="z-index:2;box-shadow:0 10px 40px rgba(0,0,0,0.25);max-height:190px;object-fit:cover;">
+        </div>
+      </div>
+      <!-- Decorative blobs behind content -->
+      <div style="position:absolute;width:200px;height:200px;background:rgba(255,255,255,0.06);border-radius:50%;top:-60px;right:200px;pointer-events:none;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="bg-white py-10 px-8 text-center">
+  <div class="flex justify-center gap-6 mb-4">
+    <a href="#" class="text-sm font-medium" style="color:#8a8fa8;">Terms and Conditions</a>
+    <span style="color:#ddd;">|</span>
+    <a href="#" class="text-sm font-medium" style="color:#8a8fa8;">Privacy Policy</a>
+  </div>
+  <p class="text-xs mb-3" style="color:#aaa;">
+    ©2024 provider of NewPhaseCreditRepair services. All Rights Reserved.
+  </p>
+  <p class="text-xs leading-relaxed mx-auto" style="color:#ccc;max-width:760px;">
+    Privacy Policy may be obtained from time to time at our website without notice. We reserve the right to change our Privacy Policy from time to time.
+    Disputes Only. New Phase Credit Repair (NPCR) is NOT a credit repair organization as defined under federal or state law, including the Credit Repair Organizations Act.
+    New Phase Credit Repair does not provide "credit repair" services or advice or assistance regarding "rebuilding" or "improving" your credit record, credit history, or credit rating.
+    New Phase Credit Repair only assists you in disputing inaccurate, erroneous, false or obsolete information.
+  </p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
